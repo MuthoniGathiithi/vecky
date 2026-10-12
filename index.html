@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f3eb">
-  <meta name="description" content="Vecky Catering & Rental Services brings thoughtful catering, fresh food and event essentials to celebrations across Nairobi.">
+  <meta name="description" content="Vecky Catering &amp; Rental Services: catering for offices and events in Nairobi since 2014. Kahawa Sukari, Thika Road. Call or WhatsApp 0726 152827.">
   <title>Vecky Catering &amp; Rental Services | Gather well</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,11 +43,10 @@
     .topline strong { color: var(--lime); font-weight: 600; }
     .header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid var(--line); background: rgba(245,243,235,.96); backdrop-filter: blur(12px); }
     .nav { width: min(var(--content), calc(100% - 80px)); min-height: 78px; margin-inline: auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 28px; }
-    .brand { display: inline-flex; width: fit-content; align-items: center; gap: 10px; }
-    .brand__mark { width: 41px; height: 39px; flex: 0 0 auto; }
-    .brand__word { display: flex; flex-direction: column; line-height: 1; }
-    .brand__name { color: var(--coral); font-family: var(--serif); font-size: 29px; font-style: italic; font-weight: 700; }
-    .brand__sub { margin-top: 5px; color: var(--ink); font-size: 7px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .brand { display: inline-flex; width: fit-content; align-items: center; }
+    .brand__logo { display: block; width: auto; height: 56px; mix-blend-mode: multiply; }
+    .brand--card { padding: 7px 12px; background: #fffdf5; border-radius: 3px; }
+    .brand--card .brand__logo { height: 58px; mix-blend-mode: normal; }
     .nav__links { display: flex; align-items: center; gap: 27px; padding: 0; margin: 0; list-style: none; }
     .nav__links a { color: #465b54; font-size: 10px; transition: color .2s; }
     .nav__links a:hover { color: var(--coral); }
@@ -73,9 +72,9 @@
     .hero__plate { position: relative; z-index: 1; width: min(100%, 390px); aspect-ratio: 1; display: grid; place-items: center; border: 1px solid rgba(245,243,235,.37); border-radius: 50%; }
     .hero__plate::before, .hero__plate::after { position: absolute; inset: 22px; border: 1px solid rgba(245,243,235,.2); border-radius: 50%; content: ""; }
     .hero__plate::after { inset: 48px; border-color: rgba(183,205,105,.4); }
-    .hero__logo { position: relative; z-index: 1; width: 76%; padding: 28px 13px; background: var(--paper); color: var(--green-dark); text-align: center; transform: rotate(-5deg); box-shadow: 8px 11px 0 rgba(0,0,0,.12); }
-    .hero__logo .brand { justify-content: center; margin: 0 auto 6px; transform: scale(1.42); transform-origin: center; }
-    .hero__logo small { display: block; margin-top: 12px; color: var(--green); font-size: 8px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    .hero__logo { position: relative; z-index: 1; width: 82%; padding: 22px 14px 18px; background: var(--paper); color: var(--green-dark); text-align: center; transform: rotate(-5deg); box-shadow: 8px 11px 0 rgba(0,0,0,.12); }
+    .hero__logo img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
+    .hero__logo small { display: block; margin-top: 10px; color: var(--green); font-size: 8px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
     .hero__tag { position: absolute; right: -2px; bottom: 24px; z-index: 2; padding: 13px 17px; background: var(--coral); color: #fffdf5; font-family: var(--serif); font-size: 16px; font-style: italic; transform: rotate(3deg); }
     .hero__foot { position: absolute; right: 40px; bottom: 25px; z-index: 2; color: rgba(245,243,235,.57); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
 
@@ -113,6 +112,13 @@
     .service__link { display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; color: var(--green); font-size: 9px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
     .service__link:hover { color: var(--coral); }
 
+    .gallery { padding: 95px 0 100px; }
+    .gallery__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .shot { position: relative; margin: 0; overflow: hidden; aspect-ratio: 4 / 5; background: var(--paper-deep); }
+    .shot img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2,.75,.25,1); }
+    .shot:hover img { transform: scale(1.045); }
+    .shot figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 30px 14px 12px; background: linear-gradient(0deg, rgba(23,61,54,.85), transparent); color: #fffdf5; font-family: var(--serif); font-size: 15px; font-style: italic; }
+
     .event { position: relative; overflow: hidden; padding: 91px 0 96px; background: var(--green); color: var(--paper); }
     .event::before { position: absolute; top: -215px; right: -115px; width: 520px; height: 520px; border: 1px solid rgba(245,243,235,.2); border-radius: 50%; box-shadow: 0 0 0 55px rgba(245,243,235,.025), 0 0 0 110px rgba(245,243,235,.025); content: ""; }
     .event__inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 82px; }
@@ -144,12 +150,13 @@
     .cta__inner { position: relative; z-index: 1; display: flex; align-items: end; justify-content: space-between; gap: 35px; }
     .cta .eyebrow { color: #fff2ce; }
     .cta h2 { max-width: 600px; margin: 17px 0 0; font-family: var(--serif); font-size: clamp(43px, 5.8vw, 72px); font-weight: 500; line-height: 1.02; }
+    .cta__buttons { display: flex; flex: 0 0 auto; flex-wrap: wrap; gap: 10px; }
     .cta .button { flex: 0 0 auto; border-color: var(--green-dark); background: var(--green-dark); }
     .cta .button:hover { border-color: var(--paper); background: var(--paper); color: var(--green-dark); }
+    .cta .button--outline { border-color: rgba(255,253,245,.8); background: transparent; color: #fffdf5; }
 
     .footer { padding: 52px 0 21px; background: var(--green-dark); color: var(--paper); }
     .footer__main { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 38px; padding-bottom: 41px; }
-    .footer .brand__sub { color: rgba(245,243,235,.72); }
     .footer__about { max-width: 240px; margin-top: 15px; color: rgba(245,243,235,.63); font-size: 9px; line-height: 1.8; }
     .footer__col h3 { margin: 3px 0 16px; color: var(--lime); font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
     .footer__col a, .footer__col p { display: block; width: fit-content; margin: 0 0 10px; color: rgba(245,243,235,.77); font-size: 9px; line-height: 1.7; }
@@ -174,14 +181,15 @@
       .footer__main { grid-template-columns: 1.2fr 1fr 1fr; }
       .footer__main > :first-child { grid-column: 1 / -1; }
     }
+    @media (max-width: 760px) {
+      .gallery__grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    }
     @media (max-width: 640px) {
       html { scroll-padding-top: 66px; }
       .wrap, .nav, .hero__inner { width: calc(100% - 38px); }
       .topline { min-height: 31px; font-size: 7px; letter-spacing: .07em; }
       .nav { min-height: 66px; grid-template-columns: 1fr auto auto; gap: 9px; }
-      .brand__mark { width: 35px; height: 34px; }
-      .brand__name { font-size: 25px; }
-      .brand__sub { font-size: 6px; }
+      .brand__logo { height: 44px; }
       .nav__action .button { min-height: 36px; padding-inline: 10px; font-size: 7px; }
       .menu-toggle { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid var(--line); background: transparent; color: var(--ink); font-size: 18px; cursor: pointer; }
       .nav__links { position: absolute; top: 100%; right: 0; left: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 7px 19px 13px; border-bottom: 1px solid var(--line); background: var(--paper); }
@@ -196,7 +204,7 @@
       .button { min-height: 45px; padding-inline: 14px; font-size: 8px; }
       .hero__art { min-height: 270px; margin-top: 24px; }
       .hero__plate { width: 260px; }
-      .hero__logo { width: 74%; padding-block: 22px; }
+      .hero__logo { width: 84%; padding: 16px 10px 14px; }
       .hero__tag { right: calc(50% - 139px); bottom: 12px; font-size: 13px; }
       .hero__foot { right: 19px; bottom: 15px; font-size: 7px; }
       .proof__inner { grid-template-columns: 1fr 1fr; padding-block: 6px; }
@@ -223,6 +231,8 @@
       .service h3 { margin-top: 19px; font-size: 22px; }
       .service p { min-height: 51px; font-size: 9px; }
       .service__link { font-size: 8px; }
+      .gallery { padding: 72px 0 76px; }
+      .shot figcaption { padding: 24px 10px 9px; font-size: 13px; }
       .event { padding: 71px 0 75px; }
       .event__inner { grid-template-columns: 1fr; gap: 27px; }
       .event h2 { font-size: 53px; }
@@ -237,7 +247,7 @@
       .cta { padding: 60px 0; }
       .cta__inner { display: block; }
       .cta h2 { font-size: 52px; }
-      .cta .button { margin-top: 23px; }
+      .cta__buttons { margin-top: 23px; }
       .footer { padding-top: 41px; }
       .footer__main { grid-template-columns: 1fr 1fr; gap: 26px 18px; padding-bottom: 28px; }
       .footer__main > :first-child { grid-column: 1 / -1; }
@@ -248,25 +258,20 @@
   </style>
 </head>
 <body>
-  <div class="topline"><strong>NAIROBI, KENYA</strong>&nbsp; · &nbsp;CATERING FOR THE MOMENTS WORTH GATHERING FOR</div>
+  <div class="topline"><strong>KAHAWA SUKARI, THIKA ROAD</strong>&nbsp; · &nbsp;CATERING FOR OFFICES &amp; EVENTS IN NAIROBI</div>
   <header class="header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="#home" aria-label="Vecky Catering and Rental Services home">
-        <svg class="brand__mark" viewBox="0 0 48 44" role="img" aria-label="Plate, fork and rising steam">
-          <ellipse cx="24" cy="31" rx="21" ry="8" fill="none" stroke="#71934d" stroke-width="2.4" />
-          <ellipse cx="24" cy="31" rx="14" ry="4" fill="none" stroke="#71934d" stroke-width="1.4" />
-          <path d="M8 5 15 25M6 7l5 1m-4-4 5 11m-4-13 5 14M37 5 28 28" fill="none" stroke="#df7950" stroke-linecap="round" stroke-width="3" />
-          <path d="M25 22c-8-8 8-10 0-18m5 16c10-8-5-10 2-17" fill="none" stroke="#9abc54" stroke-linecap="round" stroke-width="2.3" />
-        </svg>
-        <span class="brand__word"><span class="brand__name">Vecky</span><span class="brand__sub">Catering &amp; Rental Services</span></span>
+        <img class="brand__logo" src="__LOGO__" alt="Vecky Catering &amp; Rental Services logo">
       </a>
       <ul class="nav__links" id="navLinks">
         <li><a href="#story">Our approach</a></li>
         <li><a href="#services">What we do</a></li>
+        <li><a href="#gallery">Our food</a></li>
         <li><a href="#events">For your event</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="nav__action"><a class="button" href="https://www.instagram.com/veckycatering/" target="_blank" rel="noopener">Plan with us <span class="arrow" aria-hidden="true">↗</span></a></div>
+      <div class="nav__action"><a class="button" href="https://wa.me/254726152827?text=Hello%20Vecky%2C%20I%27d%20like%20to%20ask%20about%20catering." target="_blank" rel="noopener">Plan with us <span class="arrow" aria-hidden="true">↗</span></a></div>
       <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
     </nav>
   </header>
@@ -277,24 +282,16 @@
         <div class="hero__copy">
           <span class="eyebrow">Good food. Good company.</span>
           <h1 id="heroTitle">Gather well.<br><em>Celebrate</em> more.</h1>
-          <p class="hero__intro">From generous, memorable meals to the pieces that bring a room together, Vecky makes hosting feel a little easier and a lot more special.</p>
+          <p class="hero__intro">Catering for offices and events across Nairobi. From generous, memorable meals to the pieces that bring a room together, Vecky makes hosting feel a little easier and a lot more special.</p>
           <div class="hero__buttons">
-            <a class="button" href="https://www.instagram.com/veckycatering/" target="_blank" rel="noopener">Start planning <span class="arrow" aria-hidden="true">↗</span></a>
-            <a class="button button--outline" href="#services">Explore our services</a>
+            <a class="button" href="https://wa.me/254726152827?text=Hello%20Vecky%2C%20I%27d%20like%20to%20ask%20about%20catering." target="_blank" rel="noopener">Start planning <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="button button--outline" href="#gallery">See our food</a>
           </div>
         </div>
-        <div class="hero__art" aria-label="Vecky Catering & Rental Services brand mark">
+        <div class="hero__art" aria-label="Vecky Catering &amp; Rental Services logo">
           <div class="hero__plate">
             <div class="hero__logo">
-              <span class="brand">
-                <svg class="brand__mark" viewBox="0 0 48 44" aria-hidden="true">
-                  <ellipse cx="24" cy="31" rx="21" ry="8" fill="none" stroke="#71934d" stroke-width="2.4" />
-                  <ellipse cx="24" cy="31" rx="14" ry="4" fill="none" stroke="#71934d" stroke-width="1.4" />
-                  <path d="M8 5 15 25M6 7l5 1m-4-4 5 11m-4-13 5 14M37 5 28 28" fill="none" stroke="#df7950" stroke-linecap="round" stroke-width="3" />
-                  <path d="M25 22c-8-8 8-10 0-18m5 16c10-8-5-10 2-17" fill="none" stroke="#9abc54" stroke-linecap="round" stroke-width="2.3" />
-                </svg>
-                <span class="brand__word"><span class="brand__name">Vecky</span><span class="brand__sub">Catering &amp; Rental Services</span></span>
-              </span>
+              <img src="__LOGO__" alt="Vecky Catering &amp; Rental Services">
               <small>Made for gathering</small>
             </div>
             <span class="hero__tag">A table worth sharing</span>
@@ -307,9 +304,9 @@
     <section class="proof" aria-label="Vecky services at a glance">
       <div class="proof__inner wrap">
         <div class="proof__item"><span class="proof__mark" aria-hidden="true">✳</span><span class="proof__label">Food made with care<small>For your people and your day</small></span></div>
-        <div class="proof__item"><span class="proof__mark" aria-hidden="true">⌂</span><span class="proof__label">Events of every size<small>Intimate tables to big days</small></span></div>
+        <div class="proof__item"><span class="proof__mark" aria-hidden="true">⌂</span><span class="proof__label">Offices &amp; events<small>Intimate tables to big days</small></span></div>
         <div class="proof__item"><span class="proof__mark" aria-hidden="true">＋</span><span class="proof__label">Rental essentials<small>Make the setup feel complete</small></span></div>
-        <div class="proof__item"><span class="proof__mark" aria-hidden="true">♡</span><span class="proof__label">People-first service<small>Here to make hosting easier</small></span></div>
+        <div class="proof__item"><span class="proof__mark" aria-hidden="true">♡</span><span class="proof__label">Serving Nairobi since 2014<small>Here to make hosting easier</small></span></div>
       </div>
     </section>
 
@@ -320,8 +317,8 @@
           <span class="eyebrow">A little about Vecky</span>
           <h2>We make room<br>for <em>good things.</em></h2>
           <p>Every gathering has its own rhythm. We listen first, then help bring the details together, from a welcoming spread to the practical pieces that make guests feel at home.</p>
-          <p>Whether you're hosting a family celebration, a work event or a day that deserves something lovely, our team is here to make the planning feel straightforward.</p>
-          <a class="button button--outline" href="https://www.instagram.com/veckycatering/" target="_blank" rel="noopener">Say hello on Instagram <span class="arrow" aria-hidden="true">↗</span></a>
+          <p>From our base in Kahawa Sukari, off Thika Road, we cater for offices and events across Nairobi, whether it's a family celebration, a work lunch or a day that deserves something lovely.</p>
+          <a class="button button--outline" href="https://wa.me/254726152827?text=Hello%20Vecky%2C%20I%27d%20like%20to%20ask%20about%20catering." target="_blank" rel="noopener">Say hello on WhatsApp <span class="arrow" aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
@@ -333,10 +330,29 @@
           <p class="section-heading__aside">One conversation gets the important details moving. Choose the support you need and we'll take it from there.</p>
         </div>
         <div class="service-grid">
-          <article class="service"><span class="service__number">01</span><h3>Event catering</h3><p>Generous, well-prepared food for the people you're bringing together.</p><a class="service__link" href="https://www.instagram.com/veckycatering/" target="_blank" rel="noopener">Ask about catering <span class="arrow" aria-hidden="true">↗</span></a></article>
-          <article class="service"><span class="service__number">02</span><h3>Food &amp; menus</h3><p>Build a menu around your occasion, your guests and the way you want to host.</p><a class="service__link" href="https://www.instagram.com/veckycatering/" target="_blank" rel="noopener">Discuss a menu <span class="arrow" aria-hidden="true">↗</span></a></article>
-          <article class="service"><span class="service__number">03</span><h3>Equipment rental</h3><p>Useful event essentials to help your space come together beautifully.</p><a class="service__link" href="https://www.instagram.com/veckycatering/" target="_blank" rel="noopener">Ask about rentals <span class="arrow" aria-hidden="true">↗</span></a></article>
-          <article class="service"><span class="service__number">04</span><h3>Event support</h3><p>Practical help with the details, so you can be present with your guests.</p><a class="service__link" href="https://www.instagram.com/veckycatering/" target="_blank" rel="noopener">Plan your event <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="service"><span class="service__number">01</span><h3>Event catering</h3><p>Generous, well-prepared food for the people you're bringing together.</p><a class="service__link" href="https://wa.me/254726152827?text=Hello%20Vecky%2C%20I%27d%20like%20to%20ask%20about%20event%20catering." target="_blank" rel="noopener">Ask about events <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="service"><span class="service__number">02</span><h3>Office catering</h3><p>Reliable meals for meetings, team lunches and workplace occasions.</p><a class="service__link" href="https://wa.me/254726152827?text=Hello%20Vecky%2C%20I%27d%20like%20to%20ask%20about%20office%20catering." target="_blank" rel="noopener">Ask about offices <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="service"><span class="service__number">03</span><h3>Equipment rental</h3><p>Useful event essentials to help your space come together beautifully.</p><a class="service__link" href="https://wa.me/254726152827?text=Hello%20Vecky%2C%20I%27d%20like%20to%20ask%20about%20equipment%20rental." target="_blank" rel="noopener">Ask about rentals <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="service"><span class="service__number">04</span><h3>Menus &amp; planning</h3><p>Build a menu around your occasion, your guests and the way you want to host.</p><a class="service__link" href="https://wa.me/254726152827?text=Hello%20Vecky%2C%20I%27d%20like%20help%20planning%20a%20menu." target="_blank" rel="noopener">Discuss a menu <span class="arrow" aria-hidden="true">↗</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">From our kitchen</span><h2>Food worth <span class="serif" style="color:var(--coral)">gathering for.</span></h2></div>
+          <p class="section-heading__aside">A taste of what we serve at offices, celebrations and everything in between.</p>
+        </div>
+        <div class="gallery__grid">
+          <figure class="shot"><img src="__SAMOSAS__" alt="Samosas, spring rolls and sausages in foil trays" loading="lazy"><figcaption>Snacks &amp; bites</figcaption></figure>
+          <figure class="shot"><img src="__BUFFET__" alt="Hot buffet trays with vegetables and stew" loading="lazy"><figcaption>The hot buffet</figcaption></figure>
+          <figure class="shot"><img src="__FRUIT__" alt="Fruit station with fresh fruit cups and orange slices on a white-draped table" loading="lazy"><figcaption>Fresh fruit station</figcaption></figure>
+          <figure class="shot"><img src="__CHEFS1__" alt="The Vecky team in chef whites serving from chafing dishes" loading="lazy"><figcaption>Our team, serving</figcaption></figure>
+          <figure class="shot"><img src="__STEW__" alt="Rich beef stew with carrots, peas and potatoes" loading="lazy"><figcaption>Hearty stews</figcaption></figure>
+          <figure class="shot"><img src="__DESSERT__" alt="Ice cream and fruit served in tall dessert glasses" loading="lazy"><figcaption>Dessert cups</figcaption></figure>
+          <figure class="shot"><img src="__JUICE__" alt="A glass of fresh orange juice beside whole oranges" loading="lazy"><figcaption>Fresh juices</figcaption></figure>
+          <figure class="shot"><img src="__CHEFS2__" alt="Vecky caterers plating food for guests" loading="lazy"><figcaption>Served with a smile</figcaption></figure>
         </div>
       </div>
     </section>
@@ -347,11 +363,11 @@
           <span class="eyebrow">The day is yours to enjoy</span>
           <h2>Bring your people.<br>We'll help with <em>the rest.</em></h2>
           <p>Start with the occasion, guest count and what you're imagining. We'll help you work through food, rentals and the details that make the day feel like yours.</p>
-          <a class="button" href="https://www.instagram.com/veckycatering/" target="_blank" rel="noopener">Tell us what you're planning <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="button" href="https://wa.me/254726152827?text=Hello%20Vecky%2C%20I%27m%20planning%20an%20event." target="_blank" rel="noopener">Tell us what you're planning <span class="arrow" aria-hidden="true">↗</span></a>
         </div>
         <div class="event__list" aria-label="Events we can help with">
           <div class="event__item"><strong>Family gatherings</strong><p>Make milestones and reunions feel easy to host.</p></div>
-          <div class="event__item"><strong>Work events</strong><p>Give colleagues and guests a warm welcome.</p></div>
+          <div class="event__item"><strong>Office catering</strong><p>Give colleagues and guests a warm welcome.</p></div>
           <div class="event__item"><strong>Celebrations</strong><p>Mark the moments your people will remember.</p></div>
           <div class="event__item"><strong>Something else?</strong><p>Tell us your idea and let's shape it together.</p></div>
         </div>
@@ -372,7 +388,10 @@
     <section class="cta">
       <div class="cta__inner wrap">
         <div><span class="eyebrow">Your next gathering starts here</span><h2>Let's make it one to remember.</h2></div>
-        <a class="button" href="https://www.instagram.com/veckycatering/" target="_blank" rel="noopener">Plan with Vecky <span class="arrow" aria-hidden="true">↗</span></a>
+        <div class="cta__buttons">
+          <a class="button" href="https://wa.me/254726152827?text=Hello%20Vecky%2C%20I%27d%20like%20to%20ask%20about%20catering." target="_blank" rel="noopener">WhatsApp us <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="button button--outline" href="tel:+254726152827">Call 0726 152827</a>
+        </div>
       </div>
     </section>
   </main>
@@ -380,10 +399,10 @@
   <footer class="footer" id="contact">
     <div class="wrap">
       <div class="footer__main">
-        <div><a class="brand" href="#home"><svg class="brand__mark" viewBox="0 0 48 44" aria-hidden="true"><ellipse cx="24" cy="31" rx="21" ry="8" fill="none" stroke="#a9c96a" stroke-width="2.4" /><ellipse cx="24" cy="31" rx="14" ry="4" fill="none" stroke="#a9c96a" stroke-width="1.4" /><path d="M8 5 15 25M6 7l5 1m-4-4 5 11m-4-13 5 14M37 5 28 28" fill="none" stroke="#e58b65" stroke-linecap="round" stroke-width="3" /><path d="M25 22c-8-8 8-10 0-18m5 16c10-8-5-10 2-17" fill="none" stroke="#a9c96a" stroke-linecap="round" stroke-width="2.3" /></svg><span class="brand__word"><span class="brand__name">Vecky</span><span class="brand__sub">Catering &amp; Rental Services</span></span></a><p class="footer__about">Good food, thoughtful details and warm service for gatherings worth remembering.</p></div>
-        <div class="footer__col"><h3>Explore</h3><a href="#story">Our approach</a><a href="#services">Catering &amp; rentals</a><a href="#events">Events</a></div>
-        <div class="footer__col"><h3>Let's plan</h3><p>Tell us about your occasion and what you have in mind.</p><a href="https://www.instagram.com/veckycatering/" target="_blank" rel="noopener">Message us on Instagram ↗</a></div>
-        <div class="footer__col"><h3>Find Vecky</h3><a href="https://www.instagram.com/veckycatering/" target="_blank" rel="noopener">@veckycatering ↗</a><p>Nairobi, Kenya</p></div>
+        <div><a class="brand brand--card" href="#home"><img class="brand__logo" src="__LOGO__" alt="Vecky Catering &amp; Rental Services"></a><p class="footer__about">Good food, thoughtful details and warm service for offices and gatherings worth remembering. Serving Nairobi since 2014.</p></div>
+        <div class="footer__col"><h3>Explore</h3><a href="#story">Our approach</a><a href="#services">Catering &amp; rentals</a><a href="#gallery">Our food</a><a href="#events">Events</a></div>
+        <div class="footer__col"><h3>Let's plan</h3><a href="tel:+254726152827">Call 0726 152827</a><a href="https://wa.me/254726152827?text=Hello%20Vecky%2C%20I%27d%20like%20to%20ask%20about%20catering." target="_blank" rel="noopener">WhatsApp us ↗</a><a href="https://www.instagram.com/veckycatering/" target="_blank" rel="noopener">Instagram ↗</a></div>
+        <div class="footer__col"><h3>Find Vecky</h3><p>Kahawa Sukari,<br>Thika Road,<br>Nairobi, Kenya</p><a href="https://maps.google.com/?q=Kahawa+Sukari+Thika+Road+Nairobi" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>
       </div>
       <div class="footer__bottom"><span>© <span id="year"></span> Vecky Catering &amp; Rental Services</span><span>Made for moments shared around the table.</span></div>
     </div>
